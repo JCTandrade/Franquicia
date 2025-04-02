@@ -27,16 +27,16 @@ public class FranquiciaServiceImpl implements IFranquiciaService {
 
     @Override
     public ResponseGenerico guardar(FranquiciaRequestDto franquiciaRequestDto) {
-        FranquiciaEntity companiaMapperEntity = new FranquiciaEntity();
-        companiaMapperEntity.setDescripcion(franquiciaRequestDto.getDescripcion());
-        companiaMapperEntity.setNombre(franquiciaRequestDto.getNombre());
+        FranquiciaEntity franquiciaEntity = new FranquiciaEntity();
+        franquiciaEntity.setDescripcion(franquiciaRequestDto.getDescripcion());
+        franquiciaEntity.setNombre(franquiciaRequestDto.getNombre());
 
-        FranquiciaEntity franquiciaEntity = this.franquiciaRepository.save(companiaMapperEntity);
+        FranquiciaEntity entity = this.franquiciaRepository.save(franquiciaEntity);
 
         if (franquiciaEntity.getIdFranquicia() == null) {
             return this.generadorRespuesta.generarRespuesta(HttpStatus.BAD_REQUEST, EstadosEnum.ERROR, Constant.Message.ERROR_CREANDO,Constant.Message.ERROR_CREANDO);
         }
-        return this.generadorRespuesta.generarRespuesta(HttpStatus.OK,EstadosEnum.SUCCESS,Constant.Message.FRANQUICIA_GUARDADA,franquiciaEntity);
+        return this.generadorRespuesta.generarRespuesta(HttpStatus.OK,EstadosEnum.SUCCESS,Constant.Message.FRANQUICIA_GUARDADA,entity);
     }
 
     @Override

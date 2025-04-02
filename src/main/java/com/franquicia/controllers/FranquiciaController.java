@@ -57,9 +57,9 @@ public class FranquiciaController {
    
 
     @PutMapping("actualizar/{id}")
-    @Operation(summary = "Actualizar la compañia", description = "Método que permite actualizar la compañia")
+    @Operation(summary = "Actualizar la franquicia", description = "Método que permite actualizar la franquicia")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Compañia actualizada correctamente",
+            @ApiResponse(responseCode = "200", description = "franquicia actualizada correctamente",
                     content = @Content(mediaType = "application/json",
                             schema = @Schema(implementation = ResponseGenerico.class),
                             examples = @ExampleObject(name = "example1", value = "{\"status\":\"OK\",\"estadoOperacion\":\"SUCCESS\"," +
