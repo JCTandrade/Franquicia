@@ -1,5 +1,6 @@
 package com.franquicia.services.impl;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Objects;
 
@@ -116,5 +117,10 @@ public class ProductoServiceImpl implements IProductoService {
             Constant.Message.ERROR_CONSULTADO.replace("%s", "producto"), e.getMessage());
         }
        
+    }
+
+    @Override
+    public List<ProductoEntity> findBySucursal(SucursalEntity sucursalEntity) {
+        return this.productoRepository.findBySucursal(sucursalEntity);
     }
 }
