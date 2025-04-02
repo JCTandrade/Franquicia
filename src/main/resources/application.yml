@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/franquicia
-    username: root
-    password: admin
+    url: jdbc:mysql://sql5.freesqldatabase.com:3306/sql5770941
+    username: sql5770941
+    password: HsXRAsjvL6
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
