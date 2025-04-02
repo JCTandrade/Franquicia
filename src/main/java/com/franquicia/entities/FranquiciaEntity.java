@@ -2,11 +2,17 @@ package com.franquicia.entities;
 
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
 @Table(name = "franquicia")
+@Builder(toBuilder = true)
+@AllArgsConstructor
+@NoArgsConstructor
 public class FranquiciaEntity {
 
     @Id
