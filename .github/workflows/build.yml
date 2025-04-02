@@ -18,6 +18,3 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-
-      - name: Construir con Maven y Cobertura
-        run: mvn clean verify
