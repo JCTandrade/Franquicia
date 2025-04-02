@@ -10,10 +10,10 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "sucursal")
 @Builder(toBuilder = true)
+@AllArgsConstructor
+@NoArgsConstructor
 public class SucursalEntity {
     
     @Id
@@ -27,7 +27,7 @@ public class SucursalEntity {
     @Column(name = "telefono")
     private String telefono;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "franquicia_id", nullable = false)
     @JsonIgnore
     private FranquiciaEntity franquicia;
