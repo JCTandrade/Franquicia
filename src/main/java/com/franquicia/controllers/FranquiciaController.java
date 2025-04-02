@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "v1/franquicia", produces = MediaType.APPLICATION_JSON_VALUE)
-@Tag(name = "Franquicia", description = "Operaciones relacionadas con las franquicia")
+@Tag(name = "Franquicia: ", description = "Operaciones relacionadas con las franquicia.")
 @AllArgsConstructor
 public class FranquiciaController {
 
