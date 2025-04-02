@@ -1,5 +1,6 @@
 package com.franquicia.services.impl;
- 
+
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Objects;
 
@@ -108,6 +109,15 @@ public class SucursalImplService implements ISucursalService {
     @Override
     public SucursalEntity buscarPorIdEntity(Long id) {
         return this.sucursalRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public List<SucursalEntity> buscarPorFranquicia(FranquiciaEntity franquiciaEntity) {
+        List<SucursalEntity> buscar = this.sucursalRepository.findByFranquicia(franquiciaEntity);
+        if (buscar.isEmpty()){
+            return null;
+        }
+        return buscar;
     }
 
 }

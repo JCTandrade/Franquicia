@@ -1,0 +1,6 @@
+services:
+  franquicia-api:
+    build: .
+    container_name: franquicia-api
+    ports:
+      - "8080:8080"
