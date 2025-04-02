@@ -15,6 +15,5 @@ public class Constant {
         public static String INACTIVA_FRANQUICIA = "La franquicia se encuentra es estado inactiva y no se le puede asociar ninguna sucursal";
 
         public static String NO_CAMBIAR = "No se puede cambiar de franquicia una sucursal";
-        public static String SUCURSAL_ASIGNADA = "No se puede eliminar la compañía porque tiene sucursales asignadas.";
     }
 }
