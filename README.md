@@ -1,3 +1,4 @@
+## API Reference
 # Franquicia
 
 API de prueba para cumplir con los siguientes objetivos.
@@ -9,9 +10,15 @@ API de prueba para cumplir con los siguientes objetivos.
 * Exponer endpoint para eliminar un nuevo producto a una sucursal
 * Exponer endpoint para modificar un Stock de un nuevo producto
 * Exponer endpoint para agregar que permita mostrar cuál es el producto que más stock tiene por sucursal para una
-franquicia puntual. Debe retomar un listado de productos que indiquen a qué sucursal pertenece.
+  franquicia puntual. Debe retomar un listado de productos que indiquen a qué sucursal pertenece.
 * Utilizar sistemas de persistencia de datos como Redis, MySql, Mongo BD, Dynamo en algún proveedor de nube.
-Queda abierto a libre escogencia.
+  Queda abierto a libre escogencia.
+
+## Demo
+
+La aplicación se encuentra desarrollada en Spring Boot con java 17, se encuentra dentro de ella la configuración necesaria para crear una imagen Docker. 
+
+Al momento de ejecutar dicha imagen, Docker podemos acceder al [LINK](http://localhost:8080/swagger-ui/index.html#/) donde se encuentra la documentación swagger.
 
 ## API Reference
 
