@@ -1,4 +1,4 @@
-name: Construir Spring Boot
+name: Construir Spring Boot con Cobertura
 
 on:
   push:
@@ -19,5 +19,5 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Construir con Maven
-        run: mvn clean package -DskipTests
+      - name: Construir con Maven y Cobertura
+        run: mvn clean verify
