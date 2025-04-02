@@ -175,3 +175,119 @@ curl --location --request PUT 'localhost:8080/v1/sucursal/actualizar/1' \
     }
 }
 ```
+
+### Exponer endpoint para agregar un nuevo producto a la sucursal
+Este endpoint permite agregar una nueva sucursal a la franquicia
+
+```http
+POST localhost:8080/v1/producto/guardar
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `idSucursal` | `Long` | **Required**. ID de la sucursal |
+| `nombre` | `string` |  Nombre del producto |
+| `cantidadStock` | `int` |  cantidad del producto |
+
+#### Request
+
+```
+curl --location 'localhost:8080/v1/producto/guardar' \
+--header 'Content-Type: application/json' \
+--data '{
+    "idSucursal":1,
+    "nombre":"Producto desde postman actualizado",
+    "cantidadStock": 12
+}'
+```
+
+#### Response
+
+```
+{
+    "status": "OK",
+    "estadoOperacion": "SUCCESS",
+    "message": "La operacion se realizado de manera correcta",
+    "data": {
+        "productoID": 3,
+        "nombre": "Producto desde postman actualizado",
+        "cantidadStock": 12,
+        "sucursal": {
+            "idSucursal": 1,
+            "nombre": "Guardar sucursal desde postman",
+            "telefono": "3223008828"
+        }
+    }
+}
+```
+
+### Endpoint para eliminar un nuevo producto a una sucursal
+```http
+ DELETE localhost:8080/v1/producto/eliminar/1
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id` | `Long` | **Required**. ID del producto a eliminar |
+
+#### Request
+
+```
+curl --location --request DELETE 'localhost:8080/v1/producto/eliminar/1'
+```
+
+#### Response
+
+```
+{
+    "status": "OK",
+    "estadoOperacion": "SUCCESS",
+    "message": "La operacion se realizado de manera correcta",
+    "data": null
+}
+```
+
+### Endpoint para modificar un Stock de un nuevo producto
+```http
+ PUT localhost:8080/v1/producto/eliminar/1
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `idSucursal` | `Long` | **Required**. ID de la sucursal |
+| `nombre` | `string` |  Nombre del producto |
+| `cantidadStock` | `int` |  cantidad del producto |
+| `idProducto` | `Long` | **Required**. ID del producto |
+
+#### Request
+
+```
+curl --location --request PUT 'localhost:8080/v1/producto/actualizar/2' \
+--header 'Content-Type: application/json' \
+--data '{
+    "idSucursal":1,
+    "nombre":"Producto desde postman actualizado",
+    "cantidadStock": 12,
+    "idProducto": 2
+}'
+```
+
+#### Response
+
+```
+{
+    "status": "OK",
+    "estadoOperacion": "SUCCESS",
+    "message": "La operacion se realizado de manera correcta",
+    "data": {
+        "productoID": 2,
+        "nombre": "Producto desde postman actualizado",
+        "cantidadStock": 12,
+        "sucursal": {
+            "idSucursal": 1,
+            "nombre": "Guardar sucursal desde postman",
+            "telefono": "3223008828"
+        }
+    }
+}
+```
