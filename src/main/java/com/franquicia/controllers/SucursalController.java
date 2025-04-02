@@ -37,19 +37,7 @@ public class SucursalController {
     @PostMapping("/guardar")
     @Operation(summary = "Método que permite la creación de una nueva sucursal.", description = "Devuelve objecto generico con la sucursal creada")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Se crea de manera correcta la sucursal.", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ResponseGenerico.class), examples = @ExampleObject(name = "example1", value = "{\"status\":\"OK\",\"estadoOperacion\":\"SUCCESS\","
-                    +
-                    "\"message\":\"La operacion se realizado de manera correcta\",\"data\":{\"idSucursal\":3," +
-                    "\"nombre\":\"Pinturas Cali S.A\",\"responsable\":\"Pedro tovar\",\"direccion\":\"Calle 40 # 31-3A\","
-                    +
-                    "\"telefono\":\"0018002882\",\"email\":\"taller@gmail.com\",\"createdAt\":\"2024-08-27\",\"updatedAt\":null,"
-                    +
-                    "\"estadoRegistro\":\"ACTIVO\",\"compania\":{\"idCompania\":1,\"nombre\":\"Empresas olimpica S.A\","
-                    +
-                    "\"nit\":\"123456-7363\",\"propietario\":\"Carlos mario Tovar\",\"direccion\":\"Calle 40 # 31-3A\","
-                    +
-                    "\"telefono\":\"0018002882\",\"email\":\"Olimpica@gmail.com\",\"createdAt\":\"2024-08-27\"," +
-                    "\"updatedAt\":null,\"estadoRegistro\":\"ACTIVO\"}}}")))
+            @ApiResponse(responseCode = "200", description = "Se crea de manera correcta la sucursal.", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ResponseGenerico.class), examples = @ExampleObject(name = "example1", value = "{\"status\":\"OK\",\"estadoOperacion\":\"SUCCESS\",\"message\":\"La operacion se realizado de manera correcta\",\"data\":{\"idSucursal\":2,\"nombre\":\"Guardar sucursal desde postman\",\"telefono\":\"3223008828\",\"franquicia\":{\"idFranquicia\":1,\"nombre\":\"Actualizar franquicia desde postman\",\"descripcion\":\"Franquicia creada desde postman esto es una descripcion\"}}}")))
     })
     public ResponseEntity<ResponseGenerico> guardar(@Valid @RequestBody SucursalRequestDto sucursalRequestDto) {
         ResponseGenerico servicio = this.sucursalService.guardar(sucursalRequestDto);
@@ -59,13 +47,7 @@ public class SucursalController {
     @PutMapping("actualizar/{id}")
     @Operation(summary = "Actualizar la sucursal", description = "Método que permite actualizar la sucursal")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Sucursal actualizada correctamente", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ResponseGenerico.class), examples = @ExampleObject(name = "example1", value = "{\"status\":\"OK\",\"estadoOperacion\":\"SUCCESS\","
-                    +
-                    "\"message\":\"La operacion se realizado de manera correcta\"," +
-                    "\"data\":{\"companiaDto\":{\"idCompania\":1,\"nombre\":\"Empresas olimpica S.A\"}," +
-                    "\"idSucursal\":2,\"nombre\":\"Taller Cali S.A\",\"responsable\":\"Pedro tovar\"," +
-                    "\"direccion\":\"Calle 40 # 31-3A\",\"telefono\":\"0018002882\"," +
-                    "\"email\":\"taller@gmail.com\",\"estadoRegistro\":\"ACTIVO\"}}"))),
+            @ApiResponse(responseCode = "200", description = "Sucursal actualizada correctamente", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ResponseGenerico.class), examples = @ExampleObject(name = "example1", value = "{\"status\":\"OK\",\"estadoOperacion\":\"SUCCESS\",\"message\":\"La operacion se realizado de manera correcta\",\"data\":{\"idSucursal\":1,\"nombre\":\"Actualizar sucursal desde postman 1232\",\"telefono\":\"00011133\"}}"))),
             @ApiResponse(responseCode = "400", description = "La sucursal con el ID especificado y el ID del body no coincide.", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ResponseGenerico.class), examples = @ExampleObject(name = "example1", value = "{\"status\":\"BAD_REQUEST\",\"estadoOperacion\":\"ERROR\","
                     +
                     "\"message\":\"Error: la información suministrada no coincide.\",\"data\":null}"))

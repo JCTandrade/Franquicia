@@ -7,6 +7,7 @@ public class Constant {
         public static String FRANQUICIA_ACTUALIZADA = "Se ha actualizado la franquicia";
         public static String FRANQUICIA_NO_EXISTE = "No se ha encontrado la franquicia";
         public static  String ERROR_CREANDO = "Se ha presentado un error al crear la franquicia.";
+        public static  String ERROR_CREANDO_PRODUCTO = "Se ha presentado un error al crear el producto.";
         public static  String ERROR_CONSULTADO = "Se ha presentado un error al consultar %s.";
         public static  String CONSULTA_EXITOSA= "Se ha consultado de manera correcta.";
         public static  String NO_DATA= "No se ha encontrado informacion";
