@@ -5,6 +5,7 @@ public class Constant {
         public static String OPERACION_EXITO = "La operacion se realizado de manera correcta";
         public static String FRANQUICIA_GUARDADA = "Se ha guardado la franquicia";
         public static String FRANQUICIA_ACTUALIZADA = "Se ha actualizado la franquicia";
+        public static String FRANQUICIA_NO_EXISTE = "No se ha encontrado la franquicia";
         public static  String ERROR_CREANDO = "Se ha presentado un error al crear la franquicia.";
         public static  String ERROR_CONSULTADO = "Se ha presentado un error al consultar %s.";
         public static  String CONSULTA_EXITOSA= "Se ha consultado de manera correcta.";
